@@ -32,5 +32,3 @@ var maxSubArray = function (nums) {
 		return max > maxNumInNums ? max : maxNumInNums;
 	}
 };
-
-console.log(maxSubArray([-2, 1]));
