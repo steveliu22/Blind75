@@ -1,6 +1,3 @@
-
-
-
 class Solution:
 
     def lengthOfLongestSubstring(self, s: str) -> int:
@@ -20,5 +17,3 @@ class Solution:
 
         return max_length
     
-    
-print(Solution.lengthOfLongestSubstring(Solution(), "abba"))
