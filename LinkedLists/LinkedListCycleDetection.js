@@ -12,18 +12,22 @@ var hasCycle = function (head) {
 		return false;
 	}
 
-	const seen = [];
+	let fast = head;
+	let slow = head;
 
-	let curr = head;
+	while (fast != null) {
+		fast = fast.next;
 
-	while (curr != null) {
-		if (!seen.includes(curr)) {
-			seen.push(curr);
-		} else {
-			return true;
+		if (fast == null) {
+			return false;
 		}
 
-		curr = curr.next;
+		fast = fast.next;
+		slow = slow.next;
+
+		if (fast == slow) {
+			return true;
+		}
 	}
 
 	return false;
