@@ -24,10 +24,10 @@ var isAnagram = function (s, t) {
 	});
 
 	let ans = true;
-	let iterate = s;
+	let iterate = dict1;
 
 	if (s.length < t.length) {
-		iterate = t;
+		iterate = dict2;
 	}
 
 	Object.keys(iterate).forEach((elem) => {
