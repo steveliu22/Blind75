@@ -1,0 +1,25 @@
+import math
+
+
+class Solution:
+    def max_sum_sub_array(self, nums: list[int], k: int) -> int:
+        length : int = len(nums)
+        curr_max = -math.inf
+        curr_sum = 0
+        beginning = 0
+
+        for i in range(length):
+            if i < k:
+                curr_sum += nums[i]
+
+            else:
+                curr_sum = curr_sum - nums[beginning] + nums[i]
+                beginning = i
+
+            if curr_sum > curr_max:
+                curr_max = curr_sum
+
+        return curr_max
+
+
+print(Solution.max_sum_sub_array(Solution, [1], 2))
