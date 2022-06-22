@@ -1,6 +1,4 @@
 import math
-
-
 class Solution:
     def max_sum_sub_array(self, nums: list[int], k: int) -> int:
         length : int = len(nums)
